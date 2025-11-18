@@ -1,14 +1,24 @@
-# C++ Console Snake GameNo engines. 
+# C++ Console Snake Game
 
-No graphics libraries. Just 100% C++ and the Windows Console API.
+A classic Snake game built from scratch in C++ using the Windows Console API. 
+Players control the snake, eating fruit to grow longer while avoiding their own tail. 
+Features smooth, flicker-free rendering and adjustable speed. 
 
-Welcome to a project that takes it back to the roots. 
-This is the classic Snake game built from scratch, focusing on raw memory management, Object-Oriented Programming (OOP), and low-level console control.It’s fast, it’s flicker-free, and it’s running entirely in your terminal.
+---------------
 
-The Visuals is not 4K, but it's honest work. The game renders a custom UI frame with live stats.
+Features
 
-Controls 
-Key Action ⬆️ ⬇️ ⬅️ ➡️ Move the Snake+ 
-'+' ==> Increase Speed (Hard Mode)
-'-' ==> Decrease Speed (Easy Mode)
-ESC ==> Quit Game
+- Smart Spawning: Fruit never spawns on the snake's body
+- Wall Wrapping: Teleport across screen edges
+- Adjustable Speed: Dynamic difficulty control
+- Flicker-Free: Custom rendering (No system("cls"))
+- Built with Pure C++ and Object-Oriented Programming
+
+---------------
+
+Controls
+
+- Arrow Keys : Move the Snake (Up, Down, Left, Right)
+- (Plus) : Increase Speed (Hard Mode)
+- (Minus) : Decrease Speed (Easy Mode)
+- ESC : Exit Game

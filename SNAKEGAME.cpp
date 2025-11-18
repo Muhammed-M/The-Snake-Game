@@ -120,7 +120,7 @@ Fruit RandomFruitGenerator(int W , int H)  ;
 void FruitReBirth(Game* G1 , Fruit* F1 , int* x , int* y , int BD ) ;
 SnakeHead RandomSnakeGenerator(int W , int H) ;
 
-void NewFunction(int bodycount, int *SnakeHistory_X, int *SnakeHistory_Y, SnakeHead &SH1, Game &G1, int &GameOver, int &direction, int& lastD , int Body_GUI, int &retFlag , char BodyGUI);
+void MovementFunction(int bodycount, int *SnakeHistory_X, int *SnakeHistory_Y, SnakeHead &SH1, Game &G1, int &GameOver, int &direction, int& lastD , int Body_GUI, int &retFlag , char BodyGUI);
 
 void GetValidInput(int& direction) ;
 void gotoxy(int x, int y) ;
@@ -198,7 +198,7 @@ int main()
 
                     int retFlag;
                     char BodyGUI = 'A' ;
-                    NewFunction(bodycount, SnakeHistory_X, SnakeHistory_Y, SH1, G1, GameOver, direction, lastD , Body_GUI, retFlag , BodyGUI);
+                    MovementFunction(bodycount, SnakeHistory_X, SnakeHistory_Y, SH1, G1, GameOver, direction, lastD , Body_GUI, retFlag , BodyGUI);
                     if (retFlag == 2) {break;}
                 }
                 if(GameOver != 999){GetValidInput(direction) ;}
@@ -219,7 +219,7 @@ int main()
 
                     int retFlag;
                     char BodyGUI = 'V' ;
-                    NewFunction(bodycount, SnakeHistory_X, SnakeHistory_Y, SH1, G1, GameOver, direction, lastD , Body_GUI, retFlag , BodyGUI);
+                    MovementFunction(bodycount, SnakeHistory_X, SnakeHistory_Y, SH1, G1, GameOver, direction, lastD , Body_GUI, retFlag , BodyGUI);
                     if (retFlag == 2) {break;}
                 }
                 if(GameOver != 999){GetValidInput(direction) ;}
@@ -240,7 +240,7 @@ int main()
 
                     int retFlag;
                     char BodyGUI = '>' ;
-                    NewFunction(bodycount, SnakeHistory_X, SnakeHistory_Y, SH1, G1, GameOver, direction, lastD , Body_GUI, retFlag , BodyGUI);
+                    MovementFunction(bodycount, SnakeHistory_X, SnakeHistory_Y, SH1, G1, GameOver, direction, lastD , Body_GUI, retFlag , BodyGUI);
                     if (retFlag == 2) {break;}
                 }
                 if(GameOver != 999){GetValidInput(direction) ;}
@@ -261,7 +261,7 @@ int main()
 
                     int retFlag;
                     char BodyGUI = '<' ;
-                    NewFunction(bodycount, SnakeHistory_X, SnakeHistory_Y, SH1, G1, GameOver, direction, lastD , Body_GUI, retFlag , BodyGUI);
+                    MovementFunction(bodycount, SnakeHistory_X, SnakeHistory_Y, SH1, G1, GameOver, direction, lastD , Body_GUI, retFlag , BodyGUI);
                     if (retFlag == 2) {break;}
                 }
                 if(GameOver != 999){GetValidInput(direction) ;}
@@ -495,7 +495,7 @@ SnakeHead RandomSnakeGenerator(int W , int H)
 
 }
 
-void NewFunction(int bodycount, int *SnakeHistory_X, int *SnakeHistory_Y, SnakeHead &SH1, Game &G1, int &GameOver, int &direction, int& lastD , int Body_GUI, int &retFlag , char BodyGUI)
+void MovementFunction(int bodycount, int *SnakeHistory_X, int *SnakeHistory_Y, SnakeHead &SH1, Game &G1, int &GameOver, int &direction, int& lastD , int Body_GUI, int &retFlag , char BodyGUI)
 {
     retFlag = 1;
     if (bodycount > 0)
@@ -626,6 +626,7 @@ void SetColor(int color)
 {
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
 }
+
 
 
 

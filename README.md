@@ -2,7 +2,6 @@
 
 A classic Snake game built from scratch in C++ using the Windows Console API. 
 Players control the snake, eating fruit to grow longer while avoiding their own tail. 
-Features smooth, flicker-free rendering and adjustable speed. 
 
 ---------------
 
@@ -19,6 +18,6 @@ Features
 Controls
 
 - Arrow Keys : Move the Snake (Up, Down, Left, Right)
-- (Plus) : Increase Speed (Hard Mode)
-- (Minus) : Decrease Speed (Easy Mode)
+- (Plus  + ) : Increase Speed (Hard Mode)
+- (Minus - ) : Decrease Speed (Easy Mode)
 - ESC : Exit Game
